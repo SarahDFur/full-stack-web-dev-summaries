@@ -1,0 +1,59 @@
+Arrows:
+Alt + 16 (Number Pad) : ►
+Alt + 17 (Number Pad) : ◄
+Alt + 18 (Number Pad) : ↕
+Alt + 23 (Number Pad) : ↨
+Alt + 24 (Number Pad) : ↑
+Alt + 25 (Number Pad) : ↓
+Alt + 26 (Number Pad) : →
+Alt + 27 (Number Pad) : ←
+Alt + 29 (Number Pad) : ↔
+Alt + 30 (Number Pad) : ▲
+Alt + 31 (Number Pad) : ▼
+
+Symbols:
+Alt + 1 (Number Pad) : ☺ - smile 1
+Alt + 2 (Number Pad) : ☻ - smile 2
+Alt + 3 (Number Pad) : ♥ - heart
+Alt + 4 (Number Pad) : ♦ - diamond
+Alt + 5 (Number Pad) : ♣ - club
+Alt + 6 (Number Pad) : ♠ - spade
+Alt + 7 (Number Pad) : • - dot 1
+Alt + 8 (Number Pad) : ◘ - dot 2
+Alt + 9 (Number Pad) : ○ - circle 1
+Alt + 10 (Number Pad) : ◙ - circle 2
+Alt + 11 (Number Pad) : ♂ - male
+Alt + 12 (Number Pad) : ♀ - female
+Alt + 13 (Number Pad) : ♪ - music 1
+Alt + 14 (Number Pad) : ♫ - music 2
+Alt + 15 (Number Pad) : ☼ - gear
+Alt + 19 (Number Pad) : ‼ - exclamation
+Alt + 20 (Number Pad) : ¶ - paragraph mark
+Alt + 21 (Number Pad) : § - section sign
+Alt + 22 (Number Pad) : ▬ - minus sign
+Alt + 28 (Number Pad) : ∟ - right angle
+
+Alt + 248 (Number Pad) : °
+Alt + 251 (Number Pad) : √
+
+
+Math:
+Alt + 234 (Number Pad) : Ω
+Alt + 852 (Number Pad) : ┬
+Alt + 741 (Number Pad) : σ
+Alt + 235 (Number Pad) : δ
+Alt + 236 (Number Pad) : ∞
+Alt + 237 (Number Pad) : φ
+Alt + 238 (Number Pad) : ε
+Alt + 239 (Number Pad) : ∩
+Alt + 240 (Number Pad) : ≡
+Alt + 241 (Number Pad) : ±
+Alt + 242 (Number Pad) : ≥
+Alt + 243 (Number Pad) : ≤
+Alt + 244 (Number Pad) : ⌠
+Alt + 245 (Number Pad) : ⌡
+Alt + 246 (Number Pad) : ÷
+Alt + 247 (Number Pad) : ≈
+
+Alt + 252 (Number Pad) : ⁿ
+Alt + 253 (Number Pad) : ²

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Built-in Objects:
+         From 08-objects.html:
+            * JSON (JavaScript Object Notation):
+                - a syntax
+                - similar to JavaScript object
+
+                side-by-side comparison:
+                 js object:                                         ||          JSON:
+                 {                                                  ||          {
+                    name: 'shirt',                                  ||              "name": "shirt",
+                    'delivery-time': '1 day',                       ||              "delivery-time": "1 day",
+                    rating: { //nested objects                      ||              "rating": {
+                        stars: 4.5,                                 ||                  "stars": 4.5,
+                        count: 87                                   ||                  "count": 87
+                    },                                              ||              }
+                    fun: function function1(){                      ||          }
+                        console.log('function inside object');      ||
+                    }
+                 }                                                    
+                
+                - does not support functions
+                - why use? JSON is more universal (understood by most languages)
+                - when do we use JSON? 
+                    1. when we send data between computers
+                    2. when we store data
+            * localStorage:
+                 - If a page is refreshed it will not lose all of the information if it is saved locally
+                 - Get & Set:
+                    localStorage.getItem('message');
+                    localStorage.setItem('message', [string]);
+    -->
+
+    <!--
+        Built-in Objects:
+            * DOM - Document Object Model:
+                - "document".[..] represents/models the webpage
+                Syntax:
+                    - changes webpage
+                    - accessing properties and functions
+                - combines html and javascript. Let's us control the webpage
+                - DOM allows js to have full control of the webpage
+        
+
+        Number <=> String:
+            =>:
+                String([value]);
+
+             eg: Type conversion 
+                String(25)
+                console.log('25' - 5); //==> 20 (is converted)
+             ! NO MATH SHOULD BE DONE LIKE THIS !
+            <=:
+                Number([string]);
+
+        _____________________________________
+       | Window Object:                      |
+       |     window is built-in              |
+       |     window.document;                |
+       |     window.console.log('window');   |
+       |     window.alert                    |
+       |_____________________________________|
+    -->
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <button>hello</button>
+        <button class="js-button">second button</button>
+
+        <script>
+            document.body.innerHTML = 'hello'; // ==> changes body of the web page
+            document.title = 'Good job!' // ==> changes the title of the web page
+
+        //------ properties:---------
+        //1: title - chages the title at the top of the window
+            console.log(document.title);
+            document.title = 'Changed';
+
+        //2: body - put our html body into our javascript
+            document.body; // html element ==> javascript object
+            console.log(document.body); 
+            console.log(typeof document.body); // ==> object 
+
+            document.body.innerHTML; // everything inside the body (all html in body)
+            document.body.innerHTML = 'changed'; 
+                // OR
+            document.body.innerHTML = '<button>Good job!</button>'; 
+            
+        //3: query selector
+            document.querySelector('button'); // which element to get from the html - first
+            console.log(document.querySelector('button')); // which element to get from the html
+            // if we select body, it will return the first body element
+            
+            // every property has an "innerHTML" property           
+            document.querySelector('button')
+                .innerHTML = 'Changed'; 
+
+            //class selector:
+            const buttonElem = document.querySelector('.js-button'); // selects specific element using the clss 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        [1] Steps - YouTube Button:
+            When we click the button,
+                1. If the text is "Subscribe" => "Subscribed"
+                2. Otherwise, change it back => "Subscribe" 
+        
+        InnerHTML - saves spaces
+        InnterText - does not save extra spaces
+
+        [3.1] Steps - Amazon Shipping Calculator:
+            When we click the button:
+                1. Get the text in the box
+                2. if amount < $40, add $10 
+
+         //--------------------------------------
+        - clicks, keydowns => events
+        - onclick, onkeydown => even listeners
+
+
+        Event Listeners:
+        onclick         =   click 
+        onkeydown       =   key press
+        onscroll        =   scrolling
+        onmouseenter    =   hovering over
+        onmouseleave    =   stop hovering over
+        ...
+         //--------------------------------------
+
+        [3.2] Steps:
+            When we press a key:
+                1. Check if the key is "Enter"
+                2. If it is, do the same thing as the calculate button
+        
+        
+    -->
+    <head>
+        <title>DOM Projects</title>
+    </head>
+    <body>
+        <!-- 1 -->
+        <p>YouTube Subscribe Button</p>
+        <button onclick="
+            subscribe()
+        " class="js-subscribe-button">Subscribe</button> 
+
+        <!-- 3 -->
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping</p>
+        <p>Orders over $40 = FREE shipping</p>
+        <input placeholder="Cost of order" class="js-cost-input" 
+        onkeydown="
+            handleCostKeydown(event);
+        "> <!-- void element -->
+        <button onclick="
+            calcTotal();
+        ">Calculate</button>
+        <p class="js-total-cost"></p>
+
+        <script>
+        // project 1: YouTube subscribe button:
+            function subscribe() {
+                const buttonElem = document.querySelector('.js-subscribe-button');
+
+                if (buttonElem.innerText === 'Subscribe') {
+                    buttonElem.innerHTML = 'Subscribed';
+                } else {
+                    buttonElem.innerHTML = 'Subscribe';
+                }
+            }
+        // project 3: Amazon Shipping Calculator
+        function calcTotal() {
+            const inputElem = document.querySelector('.js-cost-input');
+            
+            let cost = Number(inputElem.value); // .valye => text inside textbox
+            
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+        function handleCostKeydown(event) {
+            //console.log(event.key); // event => typing will give us a 'keyboardEvent'
+            if (event.key === 'Enter') {
+                calcTotal();
+            }
+        }
+        </script>
+    </body>
+</html>

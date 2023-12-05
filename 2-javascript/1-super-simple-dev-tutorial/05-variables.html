@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        3 Ways to create variables in JavaScript:
+         1. let - can be anything
+         2. const - can't be changed after initial assignment - safe
+         3. var - like let (original). Has issues
+
+        Tip: ALWAYS use "const" (default). 
+             Only if we can't use it ==> "let"
+
+        typeof - will show what is saved inside a variable,
+                 not just types like numbers and strings
+    -->
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <script>
+            let variable1 = 3; 
+            console.log(variable1);
+
+            let result = variable1 + 2;
+            console.log(result);
+
+            let message = 'hello';
+            console.log(message); console.log(';');
+            
+            const variable2 = 3;
+            var variable3 = 3;
+
+            console.log(typeof 3);
+            console.log(typeof variable1);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+EASY WAY:
+
+→ CDN Links
+
+Both React and ReactDOM are available over a CDN.
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+The versions above are only meant for development, and are not suitable for production. Minified and optimized production versions of React are available at:
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+To load a specific version of react and react-dom, replace 18 with the version number.
+
+→ Why the crossorigin Attribute?
+If you serve React from a CDN, we recommend to keep the crossorigin attribute set:
+
+<script crossorigin src="..."></script>
+We also recommend to verify that the CDN you are using sets the Access-Control-Allow-Origin: * HTTP header:
+
+ ___________________________________________________
+|x|Headers|Preview Response Timing                  |
+|▼ General                                          |
+|   Request URL: https://unpkg.com/react@10...      |
+|   Request Method: GET                             |
+|   Status Code: 304                                |
+|   Remote Address: [2400:cb00:2048:1::6810...]     |
+|   Referrer Policy: no-referrer-when-downgra...    |
+|---------------------------------------------------|
+|▼ Response Headers                                 |
+|   access-control-allow-origin: *                  |
+|   cache-control: public, max-age=31536000         |
+|___________________________________________________|
+Access-Control-Allow-Origin: *
+This enables a better error handling experience in React 16 and later.
+
+
+→ Adding React to an existing project:
+https://react.dev/learn/add-react-to-an-existing-project#quickly-try-jsx
+
+adding --> <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>

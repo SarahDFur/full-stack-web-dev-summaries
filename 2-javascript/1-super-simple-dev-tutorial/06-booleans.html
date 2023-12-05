@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        true // false
+        
+        Comparison Operators --------------------------------------------------------
+         1. >
+         2. <
+         3. >=
+         4. <=
+         5. ===       [=== is the same as == in javascript, 
+                       however, == trys to convert both sides]
+         6. !==
+
+        Logical Operators -----------------------------------------------------------
+         1. && ==> and - both sides are true
+         2. || ==> or - at least one side is true
+         3. ! ==> not - flip to opposite value -> (not true === false)
+        
+        Truthy & Falsy Values -------------------------------------------------------
+         [shortcuts]
+          examples:
+            if(5) { 
+                console.log('truthy')
+            }
+         
+            if(0) { 
+                console.log('falsy')
+            }
+          Falsy Values: false, 0, '', NaN (Not a Number), undefined, null 
+          Truthy Values: everyting not on the list above (^)
+                -> NaN ==> console.log('text' / 5);
+                -> undefined - no value:
+                        let var1;               or      const var1 = undefined;
+                        console.log(var1);              console.log(var1);
+        
+        Ternary Operator ?: ----------------------------------------------------------
+         [shortcut for if-statment] ==> [condition] ? [true] : [else]
+            const res = true ? 'truthy' : 'falsy'
+            console.log(res);
+        
+        Guard Operator && ------------------------------------------------------------
+         - stops early if left section is false ==> Short-Circuit Evaluation
+         - false && console.log('hello'); <==> if (condition) { console.log('hello'); }
+         - const mes = false && 'hello';
+        
+        Default Operator || ----------------------------------------------------------
+         - const cur = 'EUR' || 'USD'; <==> if (!cond) { cur = 'USD'; }
+    --> 
+    <head>
+        <title>Boleans</title>
+    </head>
+    <body>
+        <script>
+            true
+            false
+
+            console.log(3 < 5); //==> "true"
+            console.log(typeof true); //==> "boolean"
+
+            console.log(5 == '5.00') //==> "true" ==> were converted
+            console.log(5 === '5.00') //==> "false" ==> no conversion
+
+            if (true) {
+                console.log('hello');
+            } else {
+                console.log('else');
+            }
+            
+            
+            const age = 15;
+            if (age >= 16) {
+                console.log('You can drive');
+            } else if (age >= 14) {
+                console.log('almost there');
+            }
+            else {
+                console.log('You can\'t drive');
+            }
+            
+        </script>
+    </body>
+</html>

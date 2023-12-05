@@ -1,0 +1,9 @@
+HARD WAY:
+- we are not going to set up on local computer
+- to set up on local machine -> similar to nmp installations
+
+- react v18 changes!! → see in "index.js"
+- if ReactDOM.render() is used → automatically reverts to using React v17
+
+- react interprets plain js objects into html elements → see first challenge in
+  "thought-experiment.js"

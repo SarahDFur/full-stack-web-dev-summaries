@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Adding a score for the games
+
+        Steps/Algorithm (Updated):
+            1. Computer randomly selects a move
+            2. Compare the move to get the result
+            3. Update a score
+            4. Display the result and score in a popup
+    -->
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <p>Rock Paper Scissors</p>
+
+        <button onclick=" 
+            playGame('rock');
+        ">Rock</button>
+
+        <button onclick="
+            playGame('paper');
+        ">Paper</button>
+        
+        <button onclick="            
+            playGame('scissors');
+        ">Scissors</button>
+
+        <button onclick="            
+            //---------------------------   3.3   -----------------------------------
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            //---------------------------   4.4   -----------------------------------
+            localStorage.removeItem('score');
+        ">Reset Score</button>
+
+        <script>  
+            //---------------------------   3.1   -----------------------------------
+            // const score = {
+            //     wins: 0,
+            //     losses: 0,
+            //     ties: 0
+            // };
+            
+        //option 1:
+           /*
+            //---------------------------   4.3   -----------------------------------
+            const score = JSON.parse(localStorage.getItem('score'));
+            
+            //---------------------------   4.5   -----------------------------------
+            if(!score) { // <==> if(score === null)
+                score = {
+                    wins: 0,
+                    losses: 0,
+                    ties: 0
+                };
+            }
+           */
+        //option 2:
+            // --------- OR - use default operator: || ----------           
+            const score = JSON.parse(localStorage.getItem('score')) || {
+                    wins: 0,
+                    losses: 0,
+                    ties: 0
+                };
+
+            //---------------------------   4.2   -----------------------------------
+            //      get value from local stroage
+            // console.log(JSON.parse(localStorage.getItem('score')));
+            
+            //---------------------------   2   -----------------------------------
+            function playGame(playerMove){
+                const computerMove = pickComputerMove();
+
+                let result = '';
+                switch(playerMove){
+                    case 'rock': 
+                        if (computerMove === 'Rock') {
+                            result = 'Tie.'
+                        } else if (computerMove === 'Paper') {
+                            result = 'You lose.';
+                        } else {
+                            result = 'You win.';
+                        }
+                    case 'paper': 
+                        if (computerMove === 'Rock') {
+                            result = 'You win.'
+                        } else if (computerMove === 'Paper') {
+                            result = 'Tie.';
+                        } else {
+                            result = 'You lose.';
+                        }
+                    case 'scissors': 
+                        if (computerMove === 'Rock') {
+                            result = 'You lose.'
+                        } else if (computerMove === 'Paper') {
+                            result = 'You win.';
+                        } else {
+                            result = 'Tie.';
+                        } 
+                }
+            //---------------------------   3.2   -----------------------------------
+                if(result === 'You win.') {
+                    score.wins++;
+                } else if(result === 'You lose.') {
+                    score.losses++;
+                } else if (result === 'Tie.') {
+                    score.ties++;
+                }
+
+            //---------------------------   4.1   -----------------------------------
+            // local storage
+            //      save to local storage
+                localStorage.setItem('score', JSON.stringify(score));
+
+                alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result} 
+        Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+            }
+
+            //---------------------------   1   -----------------------------------
+            //let computerMove = ''; // global variable
+
+            function pickComputerMove() {
+                const randomNumber = Math.random(); // 0 <= number < 1
+                
+                let computerMove = '';
+
+                if (randomNumber >= 0 && randomNumber < 1/3) {
+                    computerMove ='Rock';
+                } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+                    computerMove = 'Paper';
+                } else {
+                    computerMove = 'Scissors';
+                }
+
+                return computerMove;
+                // return; ==> returns undefined 
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        Rules for function names:
+         1. Can't use special words [ex.: function]
+         2. Can't start with a number
+         3. Can't use special characters except: $_
+
+            best to use camelCase
+        
+        Parameters: 
+         Syntax Rules:
+          1. Can't use special words [ex.: function]
+          2. Can't start with a number
+          3. Can't use special characters except: $_
+
+            best to use camelCase
+    -->
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            function function1() {
+                console.log('hello');
+                console.log(2 + 2);
+            }
+            // calls twice
+            function1(); 
+            function1();
+            
+            //parameters
+            function calcTax(cost, taxPercent) {
+                console.log(cost * taxPercent);
+            }
+
+            calcTax(2000, 0.2);
+            calcTax(5000); //==> NaN (second parameter doesn't get anything - taxPercent is undefined)
+            
+            
+            //fix==>
+            function calcTax(cost, taxPercent = 0.1) { //default value
+                console.log(cost * taxPercent);
+            }
+
+            calcTax(2000, 0.2);
+            calcTax(5000); 
+        </script>
+    </body>
+</html>

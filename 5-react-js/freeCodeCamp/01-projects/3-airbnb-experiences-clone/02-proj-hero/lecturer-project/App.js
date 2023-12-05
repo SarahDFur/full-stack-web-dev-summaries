@@ -1,0 +1,18 @@
+import React from "react"
+import Navbar from "./comonents/Navbar"
+import Hero from "./comonents/Hero"
+
+/*
+Challenge 18: Build the Hero component.
+Check the Figma file for the design specifics.
+*/
+
+export default function App() {
+    return (
+        <div>
+            <Navbar />
+            <Hero />
+        </div>
+        // <h1>App component</h1>
+    )
+}

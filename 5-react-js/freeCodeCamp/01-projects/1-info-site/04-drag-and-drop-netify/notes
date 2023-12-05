@@ -1,0 +1,10 @@
+How to deploy projects to web
+[This only works with projects using babbel stand-alone]
+1. make a Netify account - 
+    https://www.netlify.com/?utm_source=scrimba&utm_medium=referral&utm_campaign=learnreact
+2. fill the setup page and click the "Set up and continue" button
+3. download the zip file from the scrimba course (for example)
+4. go to the Netify Drop site -
+    https://app.netlify.com/drop?utm_source=scrimba&utm_medium=referral&utm_campaign=learnreact
+5. drop the entire file
+6. you'll get a link to the site

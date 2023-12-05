@@ -1,0 +1,3 @@
+- By using the template of: import [name] from [file_path], we can call the image or file we want to be in the code. React will figure out how to call it by doing this. So we don't need to do any hard work.
+- We use it like so: <img src={[name]}/>
+- The same is true when importing css files like: import "./App.css". It teaches the bundler how to find it.

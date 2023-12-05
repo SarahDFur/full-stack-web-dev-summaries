@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        [1] YouTube Button:
+            .classList = gives us control of the class attribute
+            One solution:
+                When we click the button,
+                1. Add a class
+                2. This class will have different styles
+    -->
+    <head>
+        <title>DOM Projects</title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+
+            .subscribe-button {
+                border: none;  
+                background-color: black;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: bold;
+                border-radius: 50px;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+
+            .is-subscribed {
+                background-color: rgb(240, 240, 240);
+                color: black;
+            }
+
+            .cost-input {
+                font-size: 15px;
+                /* padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                padding-right: 10px; */
+                padding: 10px;
+            }
+
+            .calculate-button {
+                background-color: green;
+                color: white;
+                border: none;
+                font-size: 15px;
+                padding: 12px 15px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 1 -->
+        <p>YouTube Subscribe Button</p>
+        <button onclick="
+            subscribe()
+        " class="js-subscribe-button subscribe-button">Subscribe</button> 
+
+        <!-- 3 -->
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping</p>
+        <p>Orders over $40 = FREE shipping</p>
+        <input placeholder="Cost of order" class="js-cost-input cost-input" 
+        onkeydown="
+            handleCostKeydown(event);
+        "> <!-- void element -->
+        <button onclick="
+            calcTotal();
+        " class="calculate-button">Calculate</button>
+        <p class="js-total-cost"></p>
+
+        <script>
+        // project 1: YouTube subscribe button:
+            function subscribe() {
+                const buttonElem = document.querySelector('.js-subscribe-button');
+
+                if (buttonElem.innerText === 'Subscribe') {
+                    buttonElem.innerHTML = 'Subscribed';
+                    buttonElem.classList.add('is-subscribed');
+                } else {
+                    buttonElem.innerHTML = 'Subscribe';
+                    buttonElem.classList.remove('is-subscribed');
+                }
+            }
+        // project 3: Amazon Shipping Calculator
+        function calcTotal() {
+            const inputElem = document.querySelector('.js-cost-input');
+            
+            let cost = Number(inputElem.value); // .valye => text inside textbox
+            
+            if (cost < 40) {
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+        function handleCostKeydown(event) {
+            //console.log(event.key); // event => typing will give us a 'keyboardEvent'
+            if (event.key === 'Enter') {
+                calcTotal();
+            }
+        }
+        </script>
+    </body>
+</html>

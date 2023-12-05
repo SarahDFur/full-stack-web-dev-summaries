@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.nav--logo {
+    max-width: 100px;
+}
+
+.photo--grid {
+    padding: 26px 0 0 77px; 
+    max-height: 280px;
+}
+
+.hero > h1 {
+    padding: 10px 0 0 36px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39.6px;
+}
+
+.hero > p {
+    font-family: Poppins;
+    font-weight: 300;
+    line-height: 17.6px;
+    font-size: 16px;
+    padding-left: 36px;
+    max-width: 320px;
+}

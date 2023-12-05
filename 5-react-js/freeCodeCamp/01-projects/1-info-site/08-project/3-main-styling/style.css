@@ -1,0 +1,97 @@
+/* explanations on ::marker → https://developer.mozilla.org/en-US/docs/Web/CSS/::marker */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding: 30px 25px;
+}
+
+.nav--logo_text, .nav--title {
+    margin: 0;
+}
+
+.nav--icon {
+    height: 30px;
+    margin-right: 7px;
+}
+
+.nav--logo_text {
+    margin-right: auto;
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav--title {
+    color: #DEEBF8;
+    font-weight: 600;
+}
+
+/* Additions bellow ↓ */
+div > h1 {
+    margin: 57px 0px 0px 27px;
+    /* margin: top right bottom left*/
+    color: white;
+    font-weight: bold;
+    font-size: 39px;
+    font-weight: 700;
+    letter-spacing: -1.953px;
+}
+
+div > ol {
+    margin-top: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+div > ol > li {
+    color: white;
+    margin: 20px 0 0 30px;
+}
+
+div > ol > li::marker {
+    color: #61DAFB;
+    font-size: 1.4rem;
+}
+
+/*
+Alternative:
+.main-title {
+    margin: 57px 0px 0px 27px;
+    color: white;
+    font-weight: bold;
+    font-size: 39px;
+    font-weight: 700;
+    letter-spacing: -1.953px;
+}
+
+.main-lst {
+    margin-top: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.lst-i {
+    color: white;
+    margin: 20px 0 0 30px;
+}
+
+.lst-i::marker {
+    color: #61DAFB;
+    font-size: 1.4rem;
+}
+*/

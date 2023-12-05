@@ -1,0 +1,81 @@
+1:
+  PS C:\Users\User\Desktop\full-stack-dev\node-js\free-code-camp\06-npm> npm init
+  Debugger attached.
+  This utility will walk you through creating a package.json file.
+  It only covers the most common items, and tries to guess sensible defaults.
+
+  See `npm help init` for definitive documentation on these fields
+  and exactly what they do.
+
+  Use `npm install <pkg>` afterwards to install a package and
+  save it as a dependency in the package.json file.
+
+  Press ^C at any time to quit.
+  package name: (06-npm)
+  version: (1.0.0)
+  description:
+  entry point: (06-npm.js)
+  test command:
+  git repository:
+  keywords:
+  author:
+  license: (ISC)
+  About to write to C:\Users\User\Desktop\full-stack-dev\node-js\free-code-camp\06-npm\package.json:
+
+  {
+    "name": "06-npm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "06-npm.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+
+  Is this OK? (yes) yes
+_________________________________________________________________________________________________
+
+2: lodash:
+  PS C:\Users\User\Desktop\full-stack-dev\node-js\free-code-camp\06-npm> npm i lodash
+  Debugger attached.
+
+  added 1 package, and audited 2 packages in 6s
+
+  found 0 vulnerabilities
+  Waiting for the debugger to disconnect...
+_________________________________________________________________________________________________
+
+3: bootstrap - has "jquery" and "popper.js" as well
+_________________________________________________________________________________________________
+
+4: nodemon - makes it easier for developing - no need to write "node" all the time:
+  PS C:\Users\User\Desktop\full-stack-dev> npm i nodemon -D 
+  Debugger attached.
+
+  added 33 packages, and audited 35 packages in 18s
+
+  3 packages are looking for funding
+    run `npm fund` for details
+
+  found 0 vulnerabilities
+  Waiting for the debugger to disconnect...
+_________________________________________________________________________________________________
+
+5: "scripts" in package.json:
+  "scripts": { 
+    "start": "node app.js"  ==> will run this file when we type "npm start" in the terminal
+    "dev": "nodemon app.js" ==> run useing: "npm run dev" (some only work with adding "run")
+  }
+    - nodemon will spin up all the code we change, so we only need to type out a command
+      in the terminal once. The rest of the time (until Ctrl+C), the code will run again.
+_________________________________________________________________________________________________
+
+6: package numbers:
+  "dependencies": {
+    "lodash": "^4.17.21" // 4- major changes, 17- minor changes, 21- patch
+  }
+
+  https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/
