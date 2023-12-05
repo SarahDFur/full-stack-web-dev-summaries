@@ -1,0 +1,73 @@
+<!-- Step 1 -->
+<style>
+    button {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none; /* no outline for buttons */
+        height: 36px; /* px == pixels*/
+        width: 105px;
+        border-radius: 2px; /* creates rounded edges */
+        cursor: pointer; /* choosing cursor style while on element */
+    }
+
+    /* button (↑) == CSS Selector (refer to notes */
+</style>
+
+<button>SUBSCRIBE</button>
+<button>JOIN</button>
+<!-- Both buttons are syled the same. We don't want that -->
+
+<!-- Step 2 -->
+<style>
+    .subscribe-button {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none; /* no outline for buttons */
+        height: 36px; /* px == pixels*/
+        width: 105px;
+        border-radius: 2px; /* creates rounded edges */
+        cursor: pointer; /* choosing cursor style while on element */
+    }
+
+    .join-button {
+        background-color: white;
+        border-color: rgb(41, 118, 211);
+        /* 
+            with only what we have above, we'll see that the border
+            is not solid -- see in notes (image 2)
+        */
+        border-style: solid;
+        border-width: 1px;
+        color: rgb(41, 118, 211);
+        height: 36px;
+        width: 62px;
+        border-radius: 2px;
+    }
+
+    /* end of step 2  --  ↑ */
+    /* ↓  Step 3  ↓ */
+    .tweet-button {
+        background-color: rgb(2, 137, 255);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 70px;
+        border-radius: 18px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+</style>
+
+<button class="subscribe-button">
+    SUBSCRIBE
+</button>
+
+<button class="join-button">
+    JOIN
+</button>
+
+<button class="tweet-button">
+    Tweet
+</button>
