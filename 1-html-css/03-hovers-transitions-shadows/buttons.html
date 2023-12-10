@@ -1,0 +1,87 @@
+<!-- Step 1 -->
+<style>
+    .subscribe-button {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none; /* no outline for buttons */
+        height: 36px; /* px == pixels*/
+        width: 105px;
+        border-radius: 2px; /* creates rounded edges */
+        cursor: pointer; /* choosing cursor style while on element */
+        transition: opacity 1s;
+    }
+
+/* -------------------- Step 1 ---------------------- */
+    .subscribe-button:hover {
+        opacity: 0.8;
+    }
+
+    .subscribe-button:active {
+        opacity: 0.5;
+    }
+/* -------------------------------------------------- */
+
+    .join-button {
+        background-color: white;
+        border-color: rgb(41, 118, 211);
+        border-style: solid;
+        border-width: 1px;
+        color: rgb(41, 118, 211);
+        height: 36px;
+        width: 62px;
+        border-radius: 2px;
+        
+/* -------------------- Step 2 ---------------------- */
+
+        transition: background-color 0.15s, 
+            color 0.15s;                   /* we put it in the general style for an element, 
+                                              so that it changes no matter what, the way we want */
+    }
+
+    .join-button:hover {
+        background-color: rgb(41, 118, 211);
+        color: white;
+    }
+
+    .join-button:active {
+        opacity: 0.7;
+    }
+/* -------------------------------------------------- */
+
+    .tweet-button {
+        background-color: rgb(2, 137, 255);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 70px;
+        border-radius: 18px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 8px;
+
+/* -------------------- Step 3 ---------------------- */
+
+        transition: box-shadow 0.15s;
+    }  
+
+
+    .tweet-button:hover {
+        box-shadow: 10px 10px 10px black; 
+            /* box-shadow: right (horazontal), down (vertical), blur, shadow color */
+        opacity: 0.8;
+    }
+/* -------------------------------------------------- */
+</style>
+
+<button class="subscribe-button">
+    SUBSCRIBE
+</button>
+
+<button class="join-button">
+    JOIN
+</button>
+
+<button class="tweet-button">
+    Tweet
+</button>
